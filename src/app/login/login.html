@@ -8,7 +8,7 @@
       <form clrForm>
         <clr-input-container>
           <label>Username</label>
-          <input clrInput placeholder="Username" [(ngModel)]="username" name="username" (keyup.enter)="login()" />
+          <input #usernameInput clrInput placeholder="Username" [(ngModel)]="username" name="username" (keyup.enter)="login()" />
         </clr-input-container>
         <button type="submit" class="btn btn-primary" (click)="login()">Join Chat</button>
       </form>
