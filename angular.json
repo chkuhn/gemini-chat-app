@@ -13,6 +13,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/gemini-chat-app",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -28,7 +30,8 @@
               "node_modules/@cds/core/global.min.css",
               "node_modules/@clr/ui/clr-ui.min.css",
               "node_modules/@clr/icons/clr-icons.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/chat/chat.css"
             ],
             "scripts": [
               "node_modules/@webcomponents/custom-elements/custom-elements.min.js"

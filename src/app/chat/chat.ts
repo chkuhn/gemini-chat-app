@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClarityModule } from '@clr/angular';
 import '@clr/icons';
-import '@clr/icons/shapes/essential-shapes';
+import '@clr/icons/shapes/social-shapes';
 
 @Component({
   selector: 'app-chat',

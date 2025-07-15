@@ -1,34 +1,38 @@
-<div class="main-container">
-  <header class="header">
-    <div class="branding">
-      <a href="#" class="nav-link">
-        <clr-icon shape="vm-bug"></clr-icon>
-        <span class="title">Gemini Chat</span>
-      </a>
+<div class="chat-container">
+  <div class="chat-sidebar">
+    <div class="chat-sidebar-header">
+      <h2 class="title">Frickelchat</h2>
     </div>
-    <div class="header-actions">
-      <a href="#" class="nav-link nav-icon" (click)="logout()">
+    <div class="chat-sidebar-content">
+      <h3 class="users-title">Users</h3>
+      <ul class="users-list">
+        <li *ngFor="let user of users" class="user-item">
+          <span class="user-avatar">{{ user.charAt(0) }}</span>
+          <span class="user-name">{{ user }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="chat-sidebar-footer">
+      <button class="logout-button" (click)="logout()">
         <clr-icon shape="logout"></clr-icon>
-      </a>
+        <span>Logout</span>
+      </button>
     </div>
-  </header>
-  <div class="content-container">
-    <main class="content-area">
-      <div class="chat-messages">
-        <div class="message" *ngFor="let message of messages">{{ message }}</div>
-      </div>
-    </main>
-    <nav class="sidenav">
-      <section class="users-list">
-        <h3 class="sidenav-title">Users</h3>
-        <ul class="sidenav-list">
-          <li *ngFor="let user of users"><a class="nav-link">{{ user }}</a></li>
-        </ul>
-      </section>
-    </nav>
   </div>
-  <div class="chat-input">
-    <input type="text" placeholder="Type your message..." [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
-    <button (click)="sendMessage()">Send</button>
+  <div class="chat-main">
+    <div class="chat-header">
+      <h2 class="chat-title">Chat</h2>
+    </div>
+    <div class="chat-messages">
+      <div *ngFor="let message of messages" class="message-item">
+        <div class="message-content">{{ message }}</div>
+      </div>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" class="chat-input" placeholder="Type your message..." [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
+      <button class="send-button" (click)="sendMessage()">
+        <clr-icon shape="paper-plane"></clr-icon>
+      </button>
+    </div>
   </div>
 </div>
