@@ -1,5 +1,17 @@
-<div class="login-container">
-  <h2>Enter your name</h2>
-  <input type="text" [(ngModel)]="username" placeholder="Your name" (keyup.enter)="login()">
-  <button (click)="login()">Join Chat</button>
+<div class="login-wrapper">
+  <div class="login">
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      Gemini Chat
+    </section>
+    <div class="login-group">
+      <form clrForm>
+        <clr-input-container>
+          <label>Username</label>
+          <input clrInput placeholder="Username" [(ngModel)]="username" name="username" (keyup.enter)="login()" />
+        </clr-input-container>
+        <button type="submit" class="btn btn-primary" (click)="login()">Join Chat</button>
+      </form>
+    </div>
+  </div>
 </div>

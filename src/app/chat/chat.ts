@@ -2,11 +2,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ClarityModule } from '@clr/angular';
+import '@clr/icons';
+import '@clr/icons/shapes/essential-shapes';
 
 @Component({
   selector: 'app-chat',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ClarityModule],
   templateUrl: './chat.html',
   styleUrls: ['./chat.css']
 })
